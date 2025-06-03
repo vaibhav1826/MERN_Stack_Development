@@ -2,6 +2,7 @@ import React from 'react'
 import  {Link ,NavLink} from 'react-router-dom'
 
 function Home() {
+    return(
     <>
      <div className="mx-auto w-full max-w-7xl">
             <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
@@ -32,17 +33,18 @@ function Home() {
                 </div>
 
                 <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="https://i.ibb.co/5BCcDYB/Remote2.png" alt="image1" />
+                    <img className="w-96" src="https://i.pinimg.com/originals/3d/a7/a1/3da7a11be8bc9b0d08e2098fdd3a5f29.jpg" alt="image1" />
                 </div>
             </aside>
 
             <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
+                <img className="sm:w-96 w-48" src="https://th.bing.com/th/id/OIP._JDU-K1CKLXwk1pslhc-WgHaJA?rs=1&pid=ImgDetMain" alt="image2" />
             </div>
 
             <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Lorem Ipsum Yojo</h1>
         </div>
     </>
+    )
 }
 
 export default Home
