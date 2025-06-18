@@ -4,6 +4,7 @@ import App from './App.jsx';
 import About from './About.jsx';
 import Home from './Home.jsx';
 import Contactus from './Contactus.jsx';
+import User from './User.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/Contactus',
         element: <Contactus />
+      },
+      {
+        path:'/User/:userid',
+        element: <User />
       }
     ],
   }
