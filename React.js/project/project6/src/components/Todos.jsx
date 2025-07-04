@@ -1,24 +1,25 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import {removeTodo} from '../features/todo/todoSlice'
+import { removeTodo } from '../features/todo/todoSlice'
 
 function Todos() {
-    const todos = useSelector(state => state.todos)
-    const dispatch = useDispatch()
+  const todos = useSelector(state => state.todos)
+  const dispatch = useDispatch()
 
   return (
-    <>
-    <div>Todos</div>
-    <ul className="list-none">
+    <div className="max-w-xl mx-auto mt-10 px-4">
+      <h2 className="text-2xl font-semibold text-white mb-6 text-center">Todos</h2>
+      <ul className="list-none space-y-4">
         {todos.map((todo) => (
           <li
-            className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
             key={todo.id}
+            className="flex justify-between items-center bg-zinc-800 px-5 py-3 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg"
           >
-            <div className='text-white'>{todo.text}</div>
+            <div className="text-white text-lg break-words">{todo.text}</div>
             <button
-             onClick={() => dispatch(removeTodo(todo.id))}
-              className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
+              onClick={() => dispatch(removeTodo(todo.id))}
+              className="text-white bg-red-500 border-0 py-2 px-3 rounded-full hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 transition"
+              title="Delete"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +27,7 @@ function Todos() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
@@ -38,7 +39,7 @@ function Todos() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 
