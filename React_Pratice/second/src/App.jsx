@@ -1,6 +1,6 @@
 import './App.css'
-import Student from './Student'
-import ClassComponent from './ClassComponent'
+import Student from './Student.jsx'
+
 function App() {
   return (
     <>

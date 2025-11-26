@@ -1,0 +1,1 @@
+Hello, this is a sample text file created using Node.js fs module./n this is new line added to the file
