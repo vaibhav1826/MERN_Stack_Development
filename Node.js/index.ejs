@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple MongoDB Example</title>
+</head>
+<body>
+
+    <h2>Simple Express + MongoDB Example</h2>
+
+    <form action="/action" method="POST">
+        <input type="text" name="name" placeholder="Enter Name" required>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        
+        <button type="submit" name="action" value="add">Add</button>
+        <button type="submit" name="action" value="show">Show</button>
+    </form>
+
+    <hr>
+
+    <h3>Data:</h3>
+    <ul>
+        <% users.forEach(user => { %>
+            <li><b><%= user.name %></b> - <%= user.email %></li>
+        <% }) %>
+    </ul>
+
+</body>
+</html>
